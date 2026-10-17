@@ -112,12 +112,12 @@ const PROGRAMS = {
   standard: { wash: 9, vacuum: 0, steps: ['Вода', 'Активная пена', 'Шампунь', 'Смыв', 'Горячий воск'] },
   premium: { wash: 12, vacuum: 4, steps: ['Антимошка', 'Диски', 'Вода', 'Активная пена', 'Шампунь', 'Воск', 'Осмос', 'Пылесос'] },
 };
-const RATES = { day: { wash: 30, vacuum: 20 }, night: { wash: 21, vacuum: 14 } };
-const calc = { body: 1, program: 'express', time: 'day' };
+const RATES = { wash: 30, vacuum: 10 };
+const calc = { body: 1, program: 'express' };
 
 function renderCalc() {
   const p = PROGRAMS[calc.program];
-  const r = RATES[calc.time];
+  const r = RATES;
   const washMin = Math.round(p.wash * calc.body);
   const price = washMin * r.wash + p.vacuum * r.vacuum;
   $('#calcPrice').textContent = price.toLocaleString('ru-RU');
