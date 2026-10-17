@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sasha23rak-design.github.io/fixwash/sitemap.xml
